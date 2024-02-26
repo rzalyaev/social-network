@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.css';
 import Header from "./components/Header/Header";
-import Technologies from "./components/Technologies/Technologies";
+import {Navigation} from "./components/Navigation/Navigation";
+import {Content} from "./components/Content/Content";
 
 function App() {
   return (
     <div className="App">
-      Social Network
       <Header/>
-      <Technologies/>
+      <Navigation/>
+      <Content/>
     </div>
   );
 }
