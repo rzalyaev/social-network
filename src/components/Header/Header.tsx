@@ -1,12 +1,14 @@
 import React from 'react';
+import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-      <div>
-        <a href="#">Main</a>
-        <a href="#">News</a>
-        <a href="#">Friends</a>
-      </div>
+      <header className={styles.header}>
+        <div className={styles.logoWrapper}>
+          <img src="https://i.imgur.com/BGCp8In.png" alt="logo" className={styles.logo}/>
+        </div>
+        <h1>Social Network</h1>
+      </header>
   );
 };
 
