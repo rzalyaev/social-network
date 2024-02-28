@@ -1,0 +1,24 @@
+.postWrapper {
+    display: flex;
+    gap: 5px;
+}
+
+.postWrapper:not(.postWrapper:last-child) {
+    margin: 0 0 10px 0;
+}
+
+.authorAvatar {
+    max-width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #626262;
+}
+
+.postText {
+    display: flex;
+    align-items: center;
+}
+
+.postsDivider {
+    border-bottom: 1px solid rgba(189, 189, 189, 0.58);
+}
