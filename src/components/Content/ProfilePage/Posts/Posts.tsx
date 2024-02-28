@@ -26,20 +26,9 @@ export const Posts = () => {
     setCurrentPostText('');
   };
 
+  const postsList = postsArray.map(post => <Post postText={post.text}/>)
+
   return (
-        <div>
-          <div>
-            <img src="#" alt="post author avatar"/>
-            <p>Hey, why nobody loves me?</p>
-          </div>
-          <div>
-            <img src="#" alt="post author avatar"/>
-            <p>It's so snowy today!</p>
-          </div>
-          <div>
-            <img src="#" alt="post author avatar"/>
-            <p>I'm sexy and I know it!</p>
-          </div>
       <div className={styles.postsWrapper}>
         <div className={styles.sendPostForm}>
           <input name="postText"
@@ -50,6 +39,7 @@ export const Posts = () => {
               <button className={styles.sendPostButton} onClick={onClickHandler}>Send</button>}
         </div>
         <div>
+          {postsList}
         </div>
       </div>
   );
