@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './ProfilePage.module.css';
 import {Profile} from "./Profile/Profile";
 import {Posts} from "./Posts/Posts";
 
