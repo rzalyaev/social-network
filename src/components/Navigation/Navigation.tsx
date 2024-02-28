@@ -4,11 +4,11 @@ import styles from './Navigation.module.css';
 export const Navigation = () => {
   return (
       <ul className={styles.navigation}>
-        <li><a href="">Profile</a></li>
-        <li><a href="">Messages</a></li>
-        <li><a href="">News</a></li>
-        <li><a href="">Music</a></li>
-        <li><a href="">Settings</a></li>
+        <li className={styles.sidebarItem}><a href="">Profile</a></li>
+        <li className={styles.sidebarItem}><a href="">Messages</a></li>
+        <li className={styles.sidebarItem}><a href="">News</a></li>
+        <li className={styles.sidebarItem}><a href="">Music</a></li>
+        <li className={styles.sidebarItem}><a href="">Settings</a></li>
       </ul>
   );
 };
