@@ -1,11 +1,16 @@
 .header {
     grid-area: header;
+    background-color: white;
+    border-bottom: 2px solid #d0d0d0;
+}
+
+.wrapper {
     display: flex;
-    justify-content: space-between;
-    background-color: aqua;
-    min-height: 50px;
-    padding: 20px;
-    border: 2px solid #d0d0d0;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 5px 10px;
+    max-width: 1080px;
+    margin: 0 auto;
 }
 
 .logoWrapper {
@@ -15,5 +20,5 @@
 }
 
 .logo {
-    height: 50px;
+    max-height: 50px;
 }
