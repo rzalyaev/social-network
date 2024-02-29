@@ -1,0 +1,40 @@
+.contactWrapper {
+    display: flex;
+    gap: 10px;
+    height: 70px;
+    width: 100%;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-top: 1px solid #fdfdfd;
+    border-bottom: 1px solid #fdfdfd;
+}
+
+.contactWrapper:hover {
+    border-top: 1px solid #ebecee;
+    border-bottom: 1px solid #ebecee;
+    background-color: rgb(243, 244, 246);
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    padding: 10px 10px 10px 0;
+}
+
+.contactAvatar {
+    padding: 10px 0 10px 10px;
+    width: 50px;
+    object-fit: contain;
+}
+
+.contactHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lastMessageDate {
+    font-size: 0.8rem;
+    opacity: 50%;
+}
