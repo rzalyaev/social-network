@@ -1,0 +1,41 @@
+.messengerWrapper {
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    width: 650px;
+}
+
+.search {
+    padding: 10px;
+    height: 35px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.search img {
+    z-index: 2;
+    position: absolute;
+    left: 630px;
+    top: 93px;
+    width: 15px;
+    object-fit: contain;
+}
+
+.searchInput {
+    z-index: 1;
+    width: 100%;
+    padding: 0 10px 0 40px;
+    border: none;
+    border-radius: 12px;
+    background-color: #ebecee;
+}
+
+.searchInput:hover {
+    background-color: rgb(228, 229, 233);
+}
+
+.searchInput:focus {
+    border: none;
+}
