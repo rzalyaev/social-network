@@ -24,7 +24,6 @@ export const Messenger = () => {
   return (
     <div className={styles.messengerWrapper}>
       <section className={styles.search}>
-        <img src="https://cdn-icons-png.freepik.com/256/4687/4687318.png" alt="search image"/>
         <input type="text" className={styles.searchInput} placeholder={'Search...'}/>
       </section>
       <section className={styles.contacts}>
