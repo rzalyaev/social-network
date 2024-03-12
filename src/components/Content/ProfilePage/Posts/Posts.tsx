@@ -1,18 +1,13 @@
-import React, {ChangeEvent, ChangeEventHandler, useState} from 'react';
+import React, {ChangeEvent, useState} from 'react';
 import styles from './Posts.module.css';
 import {Post} from "./Post/Post";
+import {PostsType, PostType} from "../../../../state/state";
 
-type PostType = {
-  id: number
-  text: string
+type PostsPropsType = {
+  posts: PostsType
 }
 
-export const Posts = () => {
-  const posts: PostType[] = [
-    {id: 1, text: 'I want to be a programmer.'},
-    {id: 2, text: 'I like to listening music.'},
-    {id: 3, text: 'Hello, I am Ruslan.'}
-  ]
+export const Posts = ({posts}: PostsPropsType) => {
   const [postsArray, setPostsArray] = useState(posts);
   const addPost = (newPostText: string) => {
     const newPost: PostType = {id: 4, text: newPostText};
