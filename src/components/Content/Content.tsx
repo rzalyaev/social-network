@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Content.module.css';
 import {ProfilePage} from "./ProfilePage/ProfilePage";
 import {Messenger} from "./Messenger/Messenger";
-import {Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 import {StateType} from "../../state/state";
 
 type ContentPropsType = {
@@ -15,6 +15,7 @@ export const Content = ({state}: ContentPropsType) => {
         <Routes>
           <Route path={'/profile'} element={<ProfilePage/>}/>
           <Route path={'/messenger'} element={<Messenger/>}/>
+          <Route path={'/'} element={<Navigate to={'/profile'}/>}/>
         </Routes>
       </div>
   );
