@@ -3,8 +3,13 @@ import styles from './Content.module.css';
 import {ProfilePage} from "./ProfilePage/ProfilePage";
 import {Messenger} from "./Messenger/Messenger";
 import {Route, Routes} from "react-router-dom";
+import {StateType} from "../../state/state";
 
-export const Content = () => {
+type ContentPropsType = {
+  state: StateType
+}
+
+export const Content = ({state}: ContentPropsType) => {
   return (
       <div className={styles.content}>
         <Routes>
