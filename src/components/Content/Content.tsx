@@ -13,9 +13,9 @@ export const Content = ({state}: ContentPropsType) => {
   return (
       <div className={styles.content}>
         <Routes>
-          <Route path={'/profile'} element={<ProfilePage/>}/>
-          <Route path={'/messenger'} element={<Messenger/>}/>
           <Route path={'/'} element={<Navigate to={'/profile'}/>}/>
+          <Route path={'/profile'} element={<ProfilePage profilePage={state.profilePage}/>}/>
+          <Route path={'/messenger'} element={<Messenger messengerPage={state.messengerPage}/>}/>
         </Routes>
       </div>
   );
