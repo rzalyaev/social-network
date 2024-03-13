@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Contact.module.css';
-import {ContactType} from "../../../../state/state";
+import {ContactType} from "../../../../redux/state";
 
 type ContactPropsType = {
   contact: ContactType
