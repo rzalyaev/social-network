@@ -1,7 +1,8 @@
 import React, {ChangeEvent, useState} from 'react';
 import styles from './Posts.module.css';
 import {Post} from "./Post/Post";
-import {PostsType, PostType} from "../../../../state/state";
+import {PostType, PostsType} from "../../../../redux/state";
+import {v1} from "uuid";
 
 type PostsPropsType = {
   posts: PostsType
@@ -10,7 +11,7 @@ type PostsPropsType = {
 export const Posts = ({posts}: PostsPropsType) => {
   const [postsArray, setPostsArray] = useState(posts);
   const addPost = (newPostText: string) => {
-    const newPost: PostType = {id: 4, text: newPostText};
+    const newPost: PostType = {id: v1(), text: newPostText};
     setPostsArray([newPost, ...postsArray]);
   }
 
