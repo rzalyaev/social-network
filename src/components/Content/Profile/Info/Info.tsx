@@ -1,28 +1,33 @@
 import React from 'react';
-import styles from './Profile.module.css';
+import styles from './Info.module.css';
+import {InfoType} from "../../../../redux/state";
 
-export const Profile = () => {
+type InfoPropsType = {
+  info: InfoType
+}
+
+export const Info = ({info}: InfoPropsType) => {
   return (
       <div className={styles.profileWrapper}>
-        <img src="https://engineering.grab.com/img/one-small-step-closer-to-containerising-service-binaries/cover.png"
+        <img src={info.banner}
              alt="profile banner"
              className={styles.banner}
         />
         <div className={styles.profileContent}>
           <div className={styles.avatarWrapper}>
             <img
-                src="https://img.freepik.com/premium-vector/beard-man-avatar_96853-399.jpg"
+                src={info.avatar}
                 alt="profile avatar"
                 className={styles.avatar}
             />
           </div>
           <div className={styles.profileInfo}>
-            <h2>Ruslan Zalyaev</h2>
-            <p className={styles.dateOfBirth}>28 July 1995</p>
-            <p><img src="https://cdn-icons-png.flaticon.com/512/0/619.png" alt="city icon"/> Izhevsk</p>
+            <h2>{info.name}</h2>
+            <p className={styles.dateOfBirth}>{info.dob}</p>
+            <p><img src="https://cdn-icons-png.flaticon.com/512/0/619.png" alt="city icon"/> {info.city}</p>
             <p>
               <img src="https://cdn-icons-png.freepik.com/256/1006/1006771.png" alt="web site icon"/>
-              <a href="https://github.com/rzalyaev">https://github.com/rzalyaev</a>
+              <a href={info.link}>{info.link}</a>
             </p>
           </div>
         </div>
