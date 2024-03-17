@@ -3,7 +3,7 @@ import styles from './Content.module.css';
 import {Profile} from "./Profile/Profile";
 import {Messenger} from "./Messenger/Messenger";
 import {Navigate, Route, Routes} from "react-router-dom";
-import {StateType} from "../../redux/state";
+import {StateType} from "../../redux/store";
 
 type ContentPropsType = {
   state: StateType

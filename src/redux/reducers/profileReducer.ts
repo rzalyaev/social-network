@@ -1,4 +1,4 @@
-import {StateType} from "../state";
+import {StateType} from "../store";
 
 type ActionType = {
   type: string

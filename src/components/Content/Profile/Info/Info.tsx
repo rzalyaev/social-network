@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Info.module.css';
-import {InfoType} from "../../../../redux/state";
+import {InfoType} from "../../../../redux/store";
 
 type InfoPropsType = {
   info: InfoType

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Messenger.module.css';
 import {Contact} from "./Contact/Contact";
-import {MessengerPageType} from "../../../redux/state";
+import {MessengerPageType} from "../../../redux/store";
 
 type MessengerPropsType = {
   messengerPage: MessengerPageType

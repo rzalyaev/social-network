@@ -3,7 +3,7 @@ import './App.css';
 import Header from "./components/Header/Header";
 import {Navigation} from "./components/Navigation/Navigation";
 import {Content} from "./components/Content/Content";
-import {StateType} from "./redux/state";
+import {StateType} from "./redux/store";
 
 type AppPropsType = {
   state: StateType

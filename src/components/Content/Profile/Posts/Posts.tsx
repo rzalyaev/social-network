@@ -1,7 +1,7 @@
 import React, {ChangeEvent, useState} from 'react';
 import styles from './Posts.module.css';
 import {Post} from "./Post/Post";
-import {PostType, PostsType} from "../../../../redux/state";
+import {PostType, PostsType} from "../../../../redux/store";
 import {v1} from "uuid";
 
 type PostsPropsType = {
