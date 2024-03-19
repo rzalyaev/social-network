@@ -25,8 +25,14 @@ export type ContactType = {
   sex: string
 }
 type ContactsType = ContactType[]
+type MessageType = {
+  id: string
+  text: string
+}
+type MessagesType = MessageType[]
 export type MessengerPageType = {
   contacts: ContactsType
+  messages: MessagesType
 }
 
 export type StateType = {
@@ -63,6 +69,11 @@ export let store: StoreType = {
         {id: v1(), name: 'Anastasia Antonova', sex: 'female'},
         {id: v1(), name: 'Vladislav Bokarev', sex: 'male'},
         {id: v1(), name: 'Anastasia Yermolayeva', sex: 'female'}
+      ],
+      messages: [
+        {id: v1(), text: 'Hello!'},
+        {id: v1(), text: 'How are you?'},
+        {id: v1(), text: 'It is a message!'},
       ]
     }
   },
