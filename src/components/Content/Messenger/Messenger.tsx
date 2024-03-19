@@ -1,14 +1,16 @@
 import React from 'react';
 import styles from './Messenger.module.css';
 import {Contact} from "./Contact/Contact";
-import {MessengerPageType} from "../../../redux/store";
+import {StateType} from "../../../redux/store";
+import {useDispatch, useSelector} from "react-redux";
 
-type MessengerPropsType = {
-  messengerPage: MessengerPageType
-}
+export const Messenger = () => {
+  const messengerPage = useSelector((state: StateType) => state.messengerPage);
+  const dispatch = useDispatch();
 
-export const Messenger = ({messengerPage}: MessengerPropsType) => {
-  const mappedContacts = messengerPage.contacts.map(contact => <Contact contact={contact}/>)
+  const mappedContacts = messengerPage.contacts.map(contact => {
+    return <Contact key={contact.id} contact={contact}/>
+  })
 
   return (
     <div className={styles.messengerWrapper}>
