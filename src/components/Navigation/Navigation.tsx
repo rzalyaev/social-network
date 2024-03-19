@@ -9,7 +9,7 @@ export const Navigation = () => {
         <li className={styles.sidebarItem}><NavLink to="/messenger">Messages</NavLink></li>
         <li className={styles.sidebarItem}><NavLink to="/news">News</NavLink></li>
         <li className={styles.sidebarItem}><NavLink to="/music">Music</NavLink></li>
-        <li className={styles.sidebarItem}><NavLink to="/video">Settings</NavLink></li>
+        <li className={styles.sidebarItem}><NavLink to="/settings">Settings</NavLink></li>
       </ul>
   );
 };
