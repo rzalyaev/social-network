@@ -1,28 +1,24 @@
 import React, {ChangeEvent, useState} from 'react';
 import styles from './Posts.module.css';
 import {Post} from "./Post/Post";
-import {PostType, PostsType} from "../../../../redux/store";
-import {v1} from "uuid";
+import {PostsType} from "../../../../redux/store";
+import {Dispatch, UnknownAction} from "redux";
+import {addPostAC} from "../../../../redux/reducers/profileReducer";
 
 type PostsPropsType = {
   posts: PostsType
+  dispatch: Dispatch<UnknownAction>
 }
 
-export const Posts = ({posts}: PostsPropsType) => {
-  const [postsArray, setPostsArray] = useState(posts);
-  const addPost = (newPostText: string) => {
-    const newPost: PostType = {id: v1(), text: newPostText};
-    setPostsArray([newPost, ...postsArray]);
-  }
-
+export const Posts = ({posts, dispatch}: PostsPropsType) => {
   const [currentPostText, setCurrentPostText] = useState('');
-  const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => setCurrentPostText(event.currentTarget.value);
-  const onClickHandler = () => {
-    addPost(currentPostText);
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => setCurrentPostText(event.currentTarget.value);
+  const handleSendMessage = () => {
+    dispatch(addPostAC(currentPostText));
     setCurrentPostText('');
   };
 
-  const postsList = postsArray.map(post => <Post postText={post.text}/>)
+  const postsList = posts.map(post => <Post postText={post.text}/>);
 
   return (
       <div className={styles.postsWrapper}>
@@ -30,9 +26,9 @@ export const Posts = ({posts}: PostsPropsType) => {
           <input name="postText"
                  id="1"
                  value={currentPostText}
-                 onChange={onChangeHandler} className={styles.sendPostInput}></input>
+                 onChange={handleInputChange} className={styles.sendPostInput}></input>
           {currentPostText.length > 0 &&
-              <button className={styles.sendPostButton} onClick={onClickHandler}>Send</button>}
+              <button className={styles.sendPostButton} onClick={handleSendMessage}>Send</button>}
         </div>
         <div>
           {postsList}
