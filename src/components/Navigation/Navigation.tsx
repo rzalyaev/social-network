@@ -7,6 +7,7 @@ export const Navigation = () => {
       <ul className={styles.navigation}>
         <li className={styles.sidebarItem}><NavLink to="/profile">Profile</NavLink></li>
         <li className={styles.sidebarItem}><NavLink to="/messenger">Messages</NavLink></li>
+        <li className={styles.sidebarItem}><NavLink to="/users">Users</NavLink></li>
         <li className={styles.sidebarItem}><NavLink to="/news">News</NavLink></li>
         <li className={styles.sidebarItem}><NavLink to="/music">Music</NavLink></li>
         <li className={styles.sidebarItem}><NavLink to="/settings">Settings</NavLink></li>
