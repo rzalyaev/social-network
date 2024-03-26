@@ -24,7 +24,7 @@ export const Info = ({info}: InfoPropsType) => {
           <div className={styles.profileInfo}>
             <h2>{info.name}</h2>
             <p className={styles.dateOfBirth}>{info.dob}</p>
-            <p><img src="https://cdn-icons-png.flaticon.com/512/0/619.png" alt="city icon"/> {info.city}</p>
+            <p><img src="https://cdn-icons-png.flaticon.com/512/0/619.png" alt="city icon"/>  {info.city}</p>
             <p>
               <img src="https://cdn-icons-png.freepik.com/256/1006/1006771.png" alt="web site icon"/>
               <a href={info.link}>{info.link}</a>
