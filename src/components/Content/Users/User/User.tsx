@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './User.module.css';
-import {UserType} from "../../../../redux/reducers/userReducer";
+import {UserType} from "../../../../redux/reducers/usersReducer";
 
 type UserPropsType = {
   user: UserType

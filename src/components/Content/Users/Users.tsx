@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Users.module.css';
 import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType} from "../../../redux/reduxStore";
-import {subscribeAC, unsubscribeAC, UsersPageType} from "../../../redux/reducers/userReducer";
+import {subscribeAC, unsubscribeAC, UsersPageType} from "../../../redux/reducers/usersReducer";
 import User from './User/User';
 
 export const Users = () => {
